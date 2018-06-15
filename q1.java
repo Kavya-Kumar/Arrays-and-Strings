@@ -13,6 +13,13 @@ import java.util.Map;
  *  2. String length can't be more than 128 ASCII bits (or 256 for extended ASCII)
  *  Time Complexity : O(n) or O(c) where c= no. of string chars.
  *  Space Complexity : O(1)
+ *  
+ *  if i cannot use additional data structures:
+ *  1. compare each char of the string to every other charof the string taking
+ *  O(n2) time and O(1) space.
+ *  2. If input string modification is allowed, sort the string in
+ *  O(nLogn) time and then linearly check string for neighbouring 
+ *  chars that are identical. 
  */
 
 public class q1 {
