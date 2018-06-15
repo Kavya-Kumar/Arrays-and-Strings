@@ -11,7 +11,8 @@ import java.util.Map;
  *  Assumptions:
  *  1. STring is ASCII chars. (If string is Unicode, then requires more storage)
  *  2. String length can't be more than 128 ASCII bits (or 256 for extended ASCII)
- *  
+ *  Time Complexity : O(n) or O(c) where c= no. of string chars.
+ *  Space Complexity : O(1)
  */
 
 public class q1 {
@@ -28,8 +29,9 @@ public class q1 {
         //traverse string to store chars
         for (int i = 0; i < str.length(); i++) {
             
+            //store ASCII value
             int val = str.charAt(i);
-            
+
             //if char is already present, return false for no unique chars.
             if (charCheck[val]) {
                 return false;
